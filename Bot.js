@@ -1,4 +1,6 @@
- client.on('message', message => {
+ const Discord = require("discord.js");
+const client = new Discord.Client();
+client.on('message', message => {
 	    var prefix = "-";
               if(!message.channel.guild) return;
     if(message.content.startsWith(prefix + 'bc')) {
@@ -41,3 +43,4 @@
     })
     }
     });
+    client.login(process.env.BOT_TOKEN);//
